@@ -3,7 +3,7 @@ import socket
 import types
 
 host = '127.0.0.1'
-port = 80
+port = 6000
 
 sel = selectors.DefaultSelector()
 lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -34,6 +34,7 @@ def service_connection(key, mask):
             sock.close()
     if mask & selectors.EVENT_WRITE:
         if data.outb:
+            data.outb = b"""ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine"""
             print('echoing', repr(data.outb), 'to', data.addr)
             sent = sock.send(data.outb)  # Should be ready to write
             data.outb = data.outb[sent:]
