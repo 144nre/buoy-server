@@ -1,9 +1,10 @@
 import selectors
 import socket
 import types
+import os
 
-host = 'radiant-oasis-36665.herokuapp.com'
-port = 6000
+host = '127.0.0.1'
+port = int(os.environ['PORT'])
 
 sel = selectors.DefaultSelector()
 lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
