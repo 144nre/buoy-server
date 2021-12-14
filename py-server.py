@@ -3,7 +3,7 @@ import socket
 import types
 import os
 
-host = '127.0.0.1'
+host = '0.0.0.0'
 port = int(os.environ['PORT'])
 
 sel = selectors.DefaultSelector()
