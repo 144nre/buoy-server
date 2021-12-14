@@ -2,7 +2,7 @@ import selectors
 import socket
 import types
 
-host = '127.0.0.1'
+host = 'radiant-oasis-36665.herokuapp.com'
 port = 6000
 
 sel = selectors.DefaultSelector()
