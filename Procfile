@@ -1,1 +1,1 @@
-web: python py-server.py
+web: with_ngrok python py-server.py
