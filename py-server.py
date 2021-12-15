@@ -4,9 +4,9 @@ import types
 import os
 
 host = '0.0.0.0'
-port = 5000
+#port = 5000
 #if 'PORT' in os.environ:
-#    port = int(os.environ['PORT'])
+port = int(os.environ['PORT'])
 
 sel = selectors.DefaultSelector()
 lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
