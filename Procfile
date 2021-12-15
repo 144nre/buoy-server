@@ -1,1 +1,1 @@
-web: with_ngrok python py-server.py
+web: set AUX_PORT=`$PORT`; with_ngrok python py-server.py
