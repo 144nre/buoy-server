@@ -3,6 +3,7 @@ import socket
 import types
 import os
 import traceback
+import time
 
 host = '0.0.0.0'
 #port = 5000
@@ -56,3 +57,4 @@ while True:
         print(traceback.format_exc())
         print("NO EXIT")
         lsock.close()
+        time.sleep(5)
