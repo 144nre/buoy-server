@@ -53,3 +53,4 @@ try:
                 service_connection(key, mask)
 except Exception as e:
     print(traceback.format_exc())
+    print("NO EXIT")
