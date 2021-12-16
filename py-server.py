@@ -11,9 +11,10 @@ host = '0.0.0.0'
 port = int(os.environ['PORT'])
 
 sel = selectors.DefaultSelector()
-lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+lsock = None
 while True:
     try:
+        lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         lsock.bind((host, port))
         lsock.listen()
         print('listening on', (host, port), flush=True)
